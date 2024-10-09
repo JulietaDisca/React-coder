@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajax 1</title>
+    </head>
+    <body>
+        <button id="button">Obtener Texto</button>
+
+        <script>
+            //Create ADD EVENT LISTENER
+            document.getElementById("button").addEventListener('click', loadText)
+
+            function loadText() {
+                //1-Crear objeto XHR
+                var xhr = new XMLHttpRequest()
+
+                //2-OPEN - method type - url/file -async? -> true/false
+                xhr.open('GET', 'sample.txt', true)
+
+                //3- ON LOAD - check status
+                xhr.onload = function () {
+                    //check status 
+                    if(this.status === 200){
+                        console.log(this.responseText);
+                    }
+                };
+                //Enviar la request
+                xhr.send();
+            }
+        </script>
+    </body>
+</html>

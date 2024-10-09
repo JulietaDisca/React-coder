@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 3</title>
+</head>
+<body>
+    <button id="button">Obtener usuarios</button>
+    <h1>Github Users</h1>
+    <div id="users"></div>
+</body>
+
+<script>
+    //https://api.github.com/users
+
+    //Create ADD EVENT LISTENER
+    document.getElementById("button").addEventListener("click", loadUsers);
+
+    function loadUsers() {
+        //1- CREAR OBJETO XHR
+        var xhr = new XMLHttpRequest();
+        //2 - OPEN - method type - url/file _ async?
+        xhr.open("GET", "https://api.github.com/users", true);
+        xhr.onload = function () {
+            //check status
+            if(this.status === 200){
+                //console.log(this.responseText);
+                var users = JSON.parse(this.responseText);
+                //console.log(users);
+                var output = "";
+
+                for(var i in users){
+                    output +=
+                        "<div>"+
+                            '<img src="' +
+                            users[i].avarar_url + 
+                            ' "width-"70" heigth-"70">'+
+                            "<ul>" + 
+                            "<li> ID:" +
+                            users[i].id +
+                            "</li>" +
+                            "<li> Login:"
+                            users[i].login +
+                            "</li>" +
+                            "</ul>" +
+                        "</div>";
+                    }
+                    document.getElementById("users").innerHTML = output;
+            };
+        };
+        //4-SEND REQUEST
+        xhr.send();
+    };
+
+
+</script>
+</html>
