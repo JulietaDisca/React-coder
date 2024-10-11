@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-container{
+    width: 100%;
+    padding: 1rem;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    text-decoration: none;
+}
+
+.nav-li{
+    list-style: none;
+    padding: 5px;
+}

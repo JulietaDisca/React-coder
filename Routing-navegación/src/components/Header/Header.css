@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding-top: 2rem;
+    background: lightgreen;
+}
+
+img{
+    margin-bottom: 2rem;
+}
