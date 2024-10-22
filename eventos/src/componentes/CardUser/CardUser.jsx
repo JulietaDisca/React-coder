@@ -4,22 +4,21 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
-const CardUser = ({ user }) => {
+const CardUser = ( { userData } ) => {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, margin: 20}}>
         <CardActionArea>
             <CardMedia
             component="img"
-            height="140"
-            image={user.avatar_url}
+            image={userData.avatar_url}
             alt="green iguana"
             />
             <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-                {user.login}
+                {userData.login}
             </Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                {user.id}
+                {userData.location}
             </Typography>
             </CardContent>
         </CardActionArea>
@@ -28,4 +27,3 @@ const CardUser = ({ user }) => {
 }
 
 export default CardUser;
-//

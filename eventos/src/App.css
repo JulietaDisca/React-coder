@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 800px;
+  margin: 20px;
+}
+
+.TextField{
+  width: 400px;
+}
+
+.btn{
+  background: #2185d0;
+  color: #fff;
+  margin-left: 10px;
+  height: 54px;
+  width: 150px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background, color 1s;
+  outline: #188ee8;
+  border: none;
+}
+
+.btn:hover{
+  background: #6db6ed;
+  color: #000;
+}

@@ -18,7 +18,7 @@ const CardList = () => {
 
     return (
         <div className="grid">
-            {users.map((user) =>{
+            {users.map((user) => {
                 return(
                     <div key={user.id}>
                         <CardUser user={user}/> 
@@ -30,3 +30,5 @@ const CardList = () => {
 }
 
 export default CardList;
+
+//
